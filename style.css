@@ -5,7 +5,7 @@ body {
 
 .container {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
 }
 
 .row {
@@ -13,7 +13,12 @@ body {
 }
 
 .cell {
-    border: 1px solid black;
-    height: 10px;
-    width: 10px;
+    border: 1px solid gray;
+    height: 30px;
+    width: 30px;
+    flex-basis: auto;
+}
+
+.full {
+    background-color: lightcoral;
 }
