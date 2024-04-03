@@ -28,6 +28,13 @@ function generateRGB() {
     return `rgb(${red},${blue},${green})`;
 }
 
+function changeGrid(width) {
+    let container = document.querySelector(".container");
+    container.innerHTML = "";
+    createGrid(width);
+}
+
+//init
 createGrid(16);
 
 let container = document.querySelector(".container");
@@ -46,4 +53,10 @@ container.addEventListener("mouseout", (event)=> {
         // target.classList.remove('full');
         target.style.backgroundColor = 'white';
     }
+})
+
+let changeGridButton = document.querySelector(".changeGrid");
+changeGridButton.addEventListener("click",()=> {
+    let width = Math.min(parseInt(prompt("What grid size do you want?")),100);
+    changeGrid(width);
 })
